@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binance Crypto Alerts - Dashboard</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.js"></script>
+    <meta name="description" content="Real-time cryptocurrency technical analysis dashboard showing top 100 cryptocurrencies with moving average crossovers">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>📊 Crypto Alerts Dashboard</h1>
+                    <p>Technical Analysis for Top 100 Cryptocurrencies</p>
+                </div>
+                <div class="status-indicator">
+                    <span id="status-dot" class="status-dot"></span>
+                    <span id="status-text">Loading...</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Market Summary Section -->
+        <section class="market-summary">
+            <h2>Market Overview</h2>
+            <div class="summary-cards">
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-icon">📈</span>
+                        <h3>Market Sentiment</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="metric">
+                            <span class="metric-value" id="market-strength">-</span>
+                            <span class="metric-label">Overall Strength</span>
+                        </div>
+                        <div class="sentiment-bars">
+                            <div class="sentiment-bar">
+                                <span>Above MA20:</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="ma20-progress"></div>
+                                </div>
+                                <span id="ma20-percent">0%</span>
+                            </div>
+                            <div class="sentiment-bar">
+                                <span>Above MA50:</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="ma50-progress"></div>
+                                </div>
+                                <span id="ma50-percent">0%</span>
+                            </div>
+                            <div class="sentiment-bar">
+                                <span>Above MA200:</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="ma200-progress"></div>
+                                </div>
+                                <span id="ma200-percent">0%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-icon">🔄</span>
+                        <h3>Crossover Signals</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="crossover-stats">
+                            <div class="crossover-stat bullish">
+                                <span class="crossover-count" id="golden-crosses">0</span>
+                                <span class="crossover-label">🟢 Golden Crosses</span>
+                            </div>
+                            <div class="crossover-stat bearish">
+                                <span class="crossover-count" id="death-crosses">0</span>
+                                <span class="crossover-label">🔴 Death Crosses</span>
+                            </div>
+                        </div>
+                        <div class="crossover-total">
+                            Total Signals: <span id="total-crossovers">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-icon">📊</span>
+                        <h3>Market Stats</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="market-stats">
+                            <div class="stat">
+                                <span class="stat-value" id="avg-change">0%</span>
+                                <span class="stat-label">Avg 24h Change</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value" id="total-volume">$0</span>
+                                <span class="stat-label">Total Volume 24h</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value" id="last-update">-</span>
+                                <span class="stat-label">Last Update</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Controls Section -->
+        <section class="controls">
+            <div class="controls-left">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Search by symbol (e.g., BTC, ETH)">
+                    <button id="search-btn">🔍</button>
+                </div>
+                <div class="filters">
+                    <select id="filter-change">
+                        <option value="">All Changes</option>
+                        <option value="positive">Gainers Only</option>
+                        <option value="negative">Losers Only</option>
+                    </select>
+                    <select id="filter-crossover">
+                        <option value="">All Symbols</option>
+                        <option value="golden">Golden Cross</option>
+                        <option value="death">Death Cross</option>
+                    </select>
+                </div>
+            </div>
+            <div class="controls-right">
+                <button id="refresh-btn" class="btn-primary">🔄 Refresh</button>
+                <button id="auto-refresh-btn" class="btn-secondary">⏰ Auto: OFF</button>
+            </div>
+        </section>
+
+        <!-- Top Cryptocurrencies Table -->
+        <section class="crypto-table-section">
+            <h2>Top 100 Cryptocurrencies</h2>
+            <div class="table-container">
+                <table id="crypto-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Symbol</th>
+                            <th>Price</th>
+                            <th>24h Change</th>
+                            <th>24h Volume</th>
+                            <th>MA Signals</th>
+                            <th>Crossovers</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="crypto-table-body">
+                        <!-- Dynamic content -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="loading" id="table-loading">
+                <div class="spinner"></div>
+                <p>Loading cryptocurrency data...</p>
+            </div>
+        </section>
+
+        <!-- Recent Crossovers Section -->
+        <section class="recent-crossovers">
+            <h2>Recent Crossover Signals</h2>
+            <div id="crossovers-container" class="crossovers-grid">
+                <!-- Dynamic content -->
+            </div>
+        </section>
+
+        <!-- Top Movers Section -->
+        <section class="top-movers">
+            <h2>Top Movers (24h)</h2>
+            <div class="movers-container">
+                <div class="movers-column">
+                    <h3>🟢 Top Gainers</h3>
+                    <div id="top-gainers" class="movers-list">
+                        <!-- Dynamic content -->
+                    </div>
+                </div>
+                <div class="movers-column">
+                    <h3>🔴 Top Losers</h3>
+                    <div id="top-losers" class="movers-list">
+                        <!-- Dynamic content -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Analysis Modal -->
+    <div id="analysis-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-symbol">Loading...</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="analysis-tabs">
+                    <button class="tab-btn active" data-tab="overview">Overview</button>
+                    <button class="tab-btn" data-tab="moving-averages">Moving Averages</button>
+                    <button class="tab-btn" data-tab="crossovers">Crossovers</button>
+                </div>
+                <div id="analysis-content">
+                    <!-- Dynamic content -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>
