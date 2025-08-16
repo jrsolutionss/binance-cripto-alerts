@@ -1,0 +1,48 @@
+{
+  "analysis_timestamp": "2025-08-16T17:40:44.602025",
+  "total_symbols_analyzed": 5,
+  "crossovers_detected": [],
+  "alerts_generated": [],
+  "signal_statistics": {
+    "total_signals": 0,
+    "golden_crosses": 0,
+    "death_crosses": 0,
+    "high_importance": 0,
+    "medium_importance": 0,
+    "low_importance": 0
+  },
+  "alert_summary": {
+    "total_alerts": 0,
+    "high_importance": 0,
+    "medium_importance": 0,
+    "low_importance": 0,
+    "golden_crosses": 0,
+    "death_crosses": 0,
+    "unique_symbols": 0
+  },
+  "configuration": {
+    "ma_periods": [
+      20,
+      50,
+      200
+    ],
+    "crossover_types": [
+      {
+        "fast": 20,
+        "slow": 50,
+        "type": "SMA"
+      },
+      {
+        "fast": 50,
+        "slow": 200,
+        "type": "SMA"
+      },
+      {
+        "fast": 20,
+        "slow": 50,
+        "type": "EMA"
+      }
+    ],
+    "top_symbols_count": 100
+  }
+}

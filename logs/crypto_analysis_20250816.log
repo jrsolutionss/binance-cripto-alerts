@@ -1,0 +1,91 @@
+2025-08-16 17:34:26,298 - binance_crypto_alerts - ERROR - __init__:31 - Failed to initialize Binance client: HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/ping (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f4dcd260800>: Failed to resolve 'api.binance.com' ([Errno -5] No address associated with hostname)"))
+2025-08-16 17:34:26,298 - binance_crypto_alerts - INFO - __init__:41 - Crypto Analysis Application initialized
+2025-08-16 17:34:26,298 - binance_crypto_alerts - INFO - run_analysis:63 - Step 1: Testing Binance API connection...
+2025-08-16 17:34:26,300 - binance_crypto_alerts - ERROR - test_connection:233 - Binance API connection test failed: HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/ping (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f4dcd260a70>: Failed to resolve 'api.binance.com' ([Errno -5] No address associated with hostname)"))
+2025-08-16 17:34:26,300 - binance_crypto_alerts - ERROR - run_analysis:132 - Analysis failed: Failed to connect to Binance API
+2025-08-16 17:37:02,812 - binance_crypto_alerts - INFO - __init__:42 - Running in DEMO mode with mock data
+2025-08-16 17:37:02,812 - binance_crypto_alerts - INFO - __init__:51 - Crypto Analysis Application initialized
+2025-08-16 17:37:02,812 - binance_crypto_alerts - INFO - _run_demo_analysis:112 - 🎭 Running DEMO analysis with mock data...
+2025-08-16 17:37:02,816 - binance_crypto_alerts - INFO - _run_demo_analysis:122 - Generated mock data for 5 symbols
+2025-08-16 17:37:27,050 - binance_crypto_alerts - INFO - __init__:42 - Running in DEMO mode with mock data
+2025-08-16 17:37:27,050 - binance_crypto_alerts - INFO - __init__:51 - Crypto Analysis Application initialized
+2025-08-16 17:37:27,050 - binance_crypto_alerts - INFO - _run_demo_analysis:112 - 🎭 Running DEMO analysis with mock data...
+2025-08-16 17:37:27,052 - binance_crypto_alerts - INFO - _run_demo_analysis:122 - Generated mock data for 3 symbols
+2025-08-16 17:37:48,015 - binance_crypto_alerts - INFO - __init__:42 - Running in DEMO mode with mock data
+2025-08-16 17:37:48,015 - binance_crypto_alerts - INFO - __init__:51 - Crypto Analysis Application initialized
+2025-08-16 17:37:48,016 - binance_crypto_alerts - INFO - _run_demo_analysis:112 - 🎭 Running DEMO analysis with mock data...
+2025-08-16 17:37:48,018 - binance_crypto_alerts - INFO - _run_demo_analysis:122 - Generated mock data for 3 symbols
+2025-08-16 17:38:30,896 - binance_crypto_alerts - INFO - __init__:42 - Running in DEMO mode with mock data
+2025-08-16 17:38:30,896 - binance_crypto_alerts - INFO - __init__:51 - Crypto Analysis Application initialized
+2025-08-16 17:38:30,896 - binance_crypto_alerts - INFO - _run_demo_analysis:112 - 🎭 Running DEMO analysis with mock data...
+2025-08-16 17:38:30,899 - binance_crypto_alerts - INFO - _run_demo_analysis:122 - Generated mock data for 3 symbols
+2025-08-16 17:38:51,634 - binance_crypto_alerts - INFO - __init__:42 - Running in DEMO mode with mock data
+2025-08-16 17:38:51,634 - binance_crypto_alerts - INFO - __init__:51 - Crypto Analysis Application initialized
+2025-08-16 17:38:51,634 - binance_crypto_alerts - INFO - _run_demo_analysis:115 - 🎭 Running DEMO analysis with mock data...
+2025-08-16 17:38:51,636 - binance_crypto_alerts - INFO - _run_demo_analysis:125 - Generated mock data for 3 symbols
+2025-08-16 17:40:21,501 - binance_crypto_alerts - INFO - __init__:42 - Running in DEMO mode with mock data
+2025-08-16 17:40:21,501 - binance_crypto_alerts - INFO - __init__:51 - Crypto Analysis Application initialized
+2025-08-16 17:40:21,502 - binance_crypto_alerts - INFO - _run_demo_analysis:114 - 🎭 Running DEMO analysis with mock data...
+2025-08-16 17:40:21,505 - binance_crypto_alerts - INFO - _run_demo_analysis:124 - Generated mock data for 5 symbols
+2025-08-16 17:40:21,505 - binance_crypto_alerts - INFO - _process_analysis_data:130 - Step 4: Calculating moving averages...
+2025-08-16 17:40:21,505 - binance_crypto_alerts - INFO - calculate_moving_average_data:58 - Calculating moving averages for 5 symbols
+2025-08-16 17:40:21,507 - binance_crypto_alerts - WARNING - calculate_sma:21 - Insufficient data for SMA 200: 51 < 200
+2025-08-16 17:40:21,507 - binance_crypto_alerts - WARNING - calculate_ema:29 - Insufficient data for EMA 200: 51 < 200
+2025-08-16 17:40:21,509 - binance_crypto_alerts - WARNING - calculate_sma:21 - Insufficient data for SMA 200: 51 < 200
+2025-08-16 17:40:21,509 - binance_crypto_alerts - WARNING - calculate_ema:29 - Insufficient data for EMA 200: 51 < 200
+2025-08-16 17:40:21,510 - binance_crypto_alerts - WARNING - calculate_sma:21 - Insufficient data for SMA 200: 51 < 200
+2025-08-16 17:40:21,511 - binance_crypto_alerts - WARNING - calculate_ema:29 - Insufficient data for EMA 200: 51 < 200
+2025-08-16 17:40:21,512 - binance_crypto_alerts - WARNING - calculate_sma:21 - Insufficient data for SMA 200: 51 < 200
+2025-08-16 17:40:21,512 - binance_crypto_alerts - WARNING - calculate_ema:29 - Insufficient data for EMA 200: 51 < 200
+2025-08-16 17:40:21,513 - binance_crypto_alerts - WARNING - calculate_sma:21 - Insufficient data for SMA 200: 51 < 200
+2025-08-16 17:40:21,514 - binance_crypto_alerts - WARNING - calculate_ema:29 - Insufficient data for EMA 200: 51 < 200
+2025-08-16 17:40:21,514 - binance_crypto_alerts - INFO - calculate_moving_average_data:68 - Processed 5/5 symbols
+2025-08-16 17:40:21,514 - binance_crypto_alerts - INFO - calculate_moving_average_data:74 - Completed MA calculations in 0.01s
+2025-08-16 17:40:21,514 - binance_crypto_alerts - INFO - _process_analysis_data:135 - Step 5: Detecting crossover signals...
+2025-08-16 17:40:21,514 - binance_crypto_alerts - INFO - detect_all_crossovers:98 - Detecting crossovers for 5 symbols
+2025-08-16 17:40:21,517 - binance_crypto_alerts - INFO - detect_all_crossovers:113 - Found 0 total crossovers in 0.00s
+2025-08-16 17:40:21,517 - binance_crypto_alerts - INFO - _process_analysis_data:140 - Step 6: Processing signals...
+2025-08-16 17:40:21,517 - binance_crypto_alerts - INFO - _process_analysis_data:146 - Step 7: Generating alerts...
+2025-08-16 17:40:21,517 - binance_crypto_alerts - INFO - process_crossovers_to_alerts:66 - Processing 0 crossovers into alerts
+2025-08-16 17:40:21,518 - binance_crypto_alerts - INFO - process_crossovers_to_alerts:87 - Created 0 new alerts, skipped 0 duplicates
+2025-08-16 17:40:21,518 - binance_crypto_alerts - INFO - _process_analysis_data:160 - Step 8: Exporting data...
+2025-08-16 17:40:21,525 - binance_crypto_alerts - INFO - export_ma_data:244 - Exported MA data to data/moving_averages_2025-08-16.csv
+2025-08-16 17:40:21,525 - binance_crypto_alerts - WARNING - export_alerts_csv:221 - No alerts to export
+2025-08-16 17:40:21,525 - binance_crypto_alerts - INFO - _export_results:206 - Results exported successfully
+2025-08-16 17:40:21,525 - binance_crypto_alerts - INFO - _process_analysis_data:164 - Step 9: Displaying results...
+2025-08-16 17:40:21,525 - binance_crypto_alerts - ERROR - run_analysis:104 - Analysis failed: division by zero
+2025-08-16 17:40:21,526 - binance_crypto_alerts - ERROR - run_analysis:105 - Full traceback: Traceback (most recent call last):
+  File "/home/runner/work/binance-cripto-alerts/binance-cripto-alerts/main.py", line 73, in run_analysis
+    return self._run_demo_analysis(symbol_count, days_back, results, total_timer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/binance-cripto-alerts/binance-cripto-alerts/main.py", line 125, in _run_demo_analysis
+    return self._process_analysis_data(symbol_data, results, total_timer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/binance-cripto-alerts/binance-cripto-alerts/main.py", line 166, in _process_analysis_data
+    self._print_performance_summary(total_timer, results)
+  File "/home/runner/work/binance-cripto-alerts/binance-cripto-alerts/main.py", line 223, in _print_performance_summary
+    rate = results.get('symbols_analyzed', 0) / timer.elapsed_seconds
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+
+2025-08-16 17:40:44,556 - binance_crypto_alerts - INFO - __init__:42 - Running in DEMO mode with mock data
+2025-08-16 17:40:44,556 - binance_crypto_alerts - INFO - __init__:51 - Crypto Analysis Application initialized
+2025-08-16 17:40:44,556 - binance_crypto_alerts - INFO - _run_demo_analysis:114 - 🎭 Running DEMO analysis with mock data...
+2025-08-16 17:40:44,565 - binance_crypto_alerts - INFO - _run_demo_analysis:124 - Generated mock data for 5 symbols
+2025-08-16 17:40:44,565 - binance_crypto_alerts - INFO - _process_analysis_data:130 - Step 4: Calculating moving averages...
+2025-08-16 17:40:44,565 - binance_crypto_alerts - INFO - calculate_moving_average_data:58 - Calculating moving averages for 5 symbols
+2025-08-16 17:40:44,573 - binance_crypto_alerts - INFO - calculate_moving_average_data:68 - Processed 5/5 symbols
+2025-08-16 17:40:44,573 - binance_crypto_alerts - INFO - calculate_moving_average_data:74 - Completed MA calculations in 0.01s
+2025-08-16 17:40:44,573 - binance_crypto_alerts - INFO - _process_analysis_data:135 - Step 5: Detecting crossover signals...
+2025-08-16 17:40:44,573 - binance_crypto_alerts - INFO - detect_all_crossovers:98 - Detecting crossovers for 5 symbols
+2025-08-16 17:40:44,576 - binance_crypto_alerts - INFO - detect_all_crossovers:113 - Found 0 total crossovers in 0.00s
+2025-08-16 17:40:44,576 - binance_crypto_alerts - INFO - _process_analysis_data:140 - Step 6: Processing signals...
+2025-08-16 17:40:44,576 - binance_crypto_alerts - INFO - _process_analysis_data:146 - Step 7: Generating alerts...
+2025-08-16 17:40:44,576 - binance_crypto_alerts - INFO - process_crossovers_to_alerts:66 - Processing 0 crossovers into alerts
+2025-08-16 17:40:44,576 - binance_crypto_alerts - INFO - process_crossovers_to_alerts:87 - Created 0 new alerts, skipped 0 duplicates
+2025-08-16 17:40:44,576 - binance_crypto_alerts - INFO - _process_analysis_data:160 - Step 8: Exporting data...
+2025-08-16 17:40:44,601 - binance_crypto_alerts - INFO - export_ma_data:244 - Exported MA data to data/moving_averages_2025-08-16.csv
+2025-08-16 17:40:44,601 - binance_crypto_alerts - WARNING - export_alerts_csv:221 - No alerts to export
+2025-08-16 17:40:44,602 - binance_crypto_alerts - INFO - _export_results:206 - Results exported successfully
+2025-08-16 17:40:44,602 - binance_crypto_alerts - INFO - _process_analysis_data:164 - Step 9: Displaying results...
+2025-08-16 17:40:44,602 - binance_crypto_alerts - INFO - _process_analysis_data:171 - Analysis completed successfully in 0.00s
