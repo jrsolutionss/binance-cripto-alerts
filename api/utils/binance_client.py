@@ -103,6 +103,9 @@ class BinanceClient:
             return top_symbols
             
         except Exception as e:
+            # Log the error for debugging (will be visible in Vercel logs)
+            print(f"Error fetching real data from Binance: {str(e)}")
+            print(f"Error type: {type(e).__name__}")
             # Return mock data as fallback
             return self._get_mock_top_symbols(count)
     
