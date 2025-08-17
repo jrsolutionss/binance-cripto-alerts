@@ -7,6 +7,7 @@ from http.server import BaseHTTPRequestHandler
 import json
 import sys
 import os
+from datetime import datetime
 
 # Add utils to path
 sys.path.append(os.path.join(os.path.dirname(__file__), 'utils'))
@@ -37,11 +38,11 @@ class handler(BaseHTTPRequestHandler):
             
             response_data = {
                 'success': True,
-                'timestamp': client._get_cache_key('timestamp', {'now': 'true'}),
+                'timestamp': datetime.now().isoformat(),
                 'count': len(top_symbols),
                 'data': top_symbols,
                 'cache_info': {
-                    'cached': any(key.startswith('ticker/24hr') for key in client._cache.keys()),
+                    'cached': len(top_symbols) > 0,
                     'cache_duration_seconds': client.cache_duration
                 }
             }
