@@ -44,6 +44,9 @@ data/*.csv
 data/*.json
 data/alert_history.json
 
+# MCP Configuration (contains sensitive tokens)
+mcp.json
+
 # Environment variables
 .env
 .env.local
